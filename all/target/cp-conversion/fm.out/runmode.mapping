@@ -1,0 +1,7 @@
+#File edited by the Apache Sling Content Package to Sling Feature converter
+#Fri Jul 02 15:47:37 CEST 2021
+prod=mytest.all-prod.json
+stage=mytest.all-stage.json
+author=mytest.all-author.json
+publish=mytest.all-publish.json
+(default)=mytest.all.json

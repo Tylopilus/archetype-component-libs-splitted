@@ -1,0 +1,5 @@
+com/mytest/core/models/HelloWorldModelTest.class
+com/mytest/core/schedulers/SimpleScheduledTaskTest.class
+com/mytest/core/listeners/SimpleResourceListenerTest.class
+com/mytest/core/filters/LoggingFilterTest.class
+com/mytest/core/servlets/SimpleServletTest.class

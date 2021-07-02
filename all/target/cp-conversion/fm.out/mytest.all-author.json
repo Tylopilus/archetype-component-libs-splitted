@@ -1,0 +1,12 @@
+{
+  "id":"com.mytest:mytest.all:slingosgifeature:author:1.0.0-SNAPSHOT",
+  "configurations":  {
+    "com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider~mytest":    {
+      "mobile.resourceTypes":[
+        "mytest/components/page"
+      ],
+      "README":"Indicate which page resource types should display the mobile emulators.",
+      ":configurator:content-package-origins":"com.mytest:mytest.all:1.0.0-SNAPSHOT|com.mytest:mytest.ui.config:1.0.0-SNAPSHOT"
+    }
+  }
+}

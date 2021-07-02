@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 11
+Implementation-Title: MyTest - UI apps
+Implementation-Version: 1.0.0-SNAPSHOT
+Content-Package-Type: application
+Content-Package-Id: com.mytest:mytest.ui.apps:1.0.0-SNAPSHOT
+Content-Package-Description: UI apps package for MyTest
+Content-Package-Roots: /apps/mytest/clientlibs,/apps/mytest/components,/
+ apps/mytest/i18n
+Import-Package: com.mytest.core.models;version="[1.0.0,2.0.0)",org.apach
+ e.sling.scripting.sightly;version="[2.0.0,3.0.0)"
+

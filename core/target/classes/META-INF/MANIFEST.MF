@@ -1,0 +1,39 @@
+Manifest-Version: 1.0
+Bundle-Category: MyTest
+Bundle-Description: Core bundle for MyTest
+Bundle-ManifestVersion: 2
+Bundle-Name: MyTest - Core
+Bundle-SymbolicName: mytest.core
+Bundle-Version: 1.0.0.SNAPSHOT
+Export-Package: com.mytest.core.filters;version="1.0";uses:="javax.ser
+ vlet",com.mytest.core.listeners;version="1.0";uses:="org.osgi.service
+ .event",com.mytest.core.models;version="1.0";uses:="javax.annotation,
+ org.apache.sling.api.resource,org.apache.sling.models.annotations,org
+ .apache.sling.models.annotations.injectorspecific",com.mytest.core.sc
+ hedulers;version="1.0",com.mytest.core.servlets;version="1.0";uses:="
+ javax.servlet,org.apache.sling.api,org.apache.sling.api.servlets"
+Import-Package: javax.annotation;version="0.0.0",com.day.cq.wcm.api;ve
+ rsion="[1.29,2)",com.mytest.core.filters;version="[1.0,2)",com.mytest
+ .core.listeners;version="[1.0,2)",com.mytest.core.schedulers;version=
+ "[1.0,2)",com.mytest.core.servlets;version="[1.0,2)",javax.servlet;ve
+ rsion="[3.0,4)",org.apache.sling.api;version="[2.3,3)",org.apache.sli
+ ng.api.request;version="[2.4,3)",org.apache.sling.api.resource;versio
+ n="[2.12,3)",org.apache.sling.api.servlets;version="[2.3,3)",org.apac
+ he.sling.models.annotations;version="[1.5,2)",org.apache.sling.models
+ .annotations.injectorspecific;version="[1.1,2)",org.osgi.service.even
+ t;version="[1.4,2)",org.slf4j;version="[1.7,2)"
+Provide-Capability: osgi.service;objectClass:List<String>="java.lang.R
+ unnable",osgi.service;objectClass:List<String>="javax.servlet.Filter"
+ ;uses:="javax.servlet",osgi.service;objectClass:List<String>="javax.s
+ ervlet.Servlet";uses:="javax.servlet",osgi.service;objectClass:List<S
+ tring>="org.osgi.service.event.EventHandler";uses:="org.osgi.service.
+ event"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compo
+ nent)(version>=1.4.0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.e
+ e=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/com.mytest.core.filters.LoggingFilter.xml,
+ OSGI-INF/com.mytest.core.listeners.SimpleResourceListener.xml,OSGI-IN
+ F/com.mytest.core.schedulers.SimpleScheduledTask.xml,OSGI-INF/com.myt
+ est.core.servlets.SimpleServlet.xml
+Sling-Model-Classes: com.mytest.core.models.HelloWorldModel
+

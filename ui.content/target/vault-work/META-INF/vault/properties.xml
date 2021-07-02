@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>MyTest - UI content</comment>
+<entry key="allowIndexDefinitions">false</entry>
+<entry key="acHandling">merge</entry>
+<entry key="dependencies-locations">com.mytest:mytest.ui.apps:1.0.0-SNAPSHOT=maven:com.mytest:mytest.ui.apps:1.0.0-SNAPSHOT:zip</entry>
+<entry key="created">2021-07-02T13:47:33.451Z</entry>
+<entry key="groupId">com.mytest</entry>
+<entry key="description">UI content package for MyTest</entry>
+<entry key="version">1.0.0-SNAPSHOT</entry>
+<entry key="packageType">content</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="dependencies">com.mytest:mytest.ui.apps:1.0.0-SNAPSHOT</entry>
+<entry key="cloudManagerTarget">none</entry>
+<entry key="name">mytest.ui.content</entry>
+<entry key="artifactId">mytest.ui.content</entry>
+<entry key="group">com.mytest</entry>
+</properties>

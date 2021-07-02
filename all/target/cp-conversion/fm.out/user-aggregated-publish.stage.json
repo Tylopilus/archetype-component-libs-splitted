@@ -1,0 +1,77 @@
+{
+  "id":"com.mytest:mytest.all:slingosgifeature:user-aggregated-publish.stage:1.0.0-SNAPSHOT",
+  "bundles":[
+    {
+      "id":"com.mytest:mytest.core:1.0.0-SNAPSHOT",
+      "feature-origins":"com.mytest:mytest.all:slingosgifeature:1.0.0-SNAPSHOT",
+      "start-order":"20",
+      "content-package-origins":"com.mytest:mytest.all:1.0.0-SNAPSHOT"
+    }
+  ],
+  "configurations":  {
+    "org.apache.sling.commons.log.LogManager.factory.config~mytest":    {
+      ":configurator:content-package-origins":"com.mytest:mytest.all:1.0.0-SNAPSHOT|com.mytest:mytest.ui.config:1.0.0-SNAPSHOT",
+      "org.apache.sling.commons.log.pattern":"{0,date,yyyy-MM-dd HH:mm:ss.SSS} *{4}* [{2}] {3} {5}",
+      "org.apache.sling.commons.log.names":[
+        "com.mytest"
+      ],
+      "org.apache.sling.commons.log.level":"info",
+      "org.apache.sling.commons.log.file":"logs/error.log",
+      "org.apache.sling.commons.log.additiv":"false",
+      ":configurator:feature-origins":[
+        "com.mytest:mytest.all:slingosgifeature:stage:1.0.0-SNAPSHOT",
+        "com.mytest:mytest.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ]
+    },
+    "org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl":    {
+      ":configurator:content-package-origins":"com.mytest:mytest.all:1.0.0-SNAPSHOT|com.mytest:mytest.ui.config:1.0.0-SNAPSHOT",
+      "resource.resolver.mapping":[
+        "/content/mytest/</",
+        "/:/"
+      ],
+      ":configurator:feature-origins":[
+        "com.mytest:mytest.all:slingosgifeature:publish:1.0.0-SNAPSHOT"
+      ]
+    }
+  },
+  "assembled-features:ARTIFACTS|TRANSIENT":[
+    "com.mytest:mytest.all:slingosgifeature:stage:1.0.0-SNAPSHOT",
+    "com.mytest:mytest.all:slingosgifeature:1.0.0-SNAPSHOT",
+    "com.mytest:mytest.all:slingosgifeature:publish:1.0.0-SNAPSHOT"
+  ],
+  "repoinit:TEXT|true":[
+    "create path (sling:OrderedFolder) /content/dam/mytest",
+    "create path (nt:unstructured) /content/dam/mytest/jcr:content",
+    "set properties on /content/dam/mytest/jcr:content",
+    "set cq:conf{String} to /conf/mytest",
+    "set jcr:title{String} to \"MyTest\"",
+    "end",
+    "create path (sling:OrderedFolder) /content/dam/mytest",
+    "        create path (nt:unstructured) /content/dam/mytest/jcr:content",
+    "        set properties on /content/dam/mytest/jcr:content",
+    "        set cq:conf{String} to /conf/mytest",
+    "        set jcr:title{String} to \"MyTest\"",
+    "        end"
+  ],
+  "content-packages:ARTIFACTS|true":[
+    "com.mytest:mytest.ui.config:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+    "com.mytest:mytest.ui.apps:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+    "com.mytest:mytest.ui.content:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+    "com.mytest:mytest.all:zip:cp2fm-converted:1.0.0-SNAPSHOT"
+  ],
+  "api-regions:JSON|false":[
+    {
+      "name":"global",
+      "exports":[
+        "com.mytest.core.filters",
+        "com.mytest.core.listeners",
+        "com.mytest.core.models",
+        "com.mytest.core.schedulers",
+        "com.mytest.core.servlets"
+      ],
+      "feature-origins":[
+        "com.mytest:mytest.all:slingosgifeature:1.0.0-SNAPSHOT"
+      ]
+    }
+  ]
+}

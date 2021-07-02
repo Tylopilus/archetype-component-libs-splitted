@@ -1,0 +1,11 @@
+com/mytest/core/servlets/SimpleServlet.class
+com/mytest/core/models/HelloWorldModel.class
+com/mytest/core/listeners/SimpleResourceListener.class
+com/mytest/core/filters/package-info.class
+com/mytest/core/servlets/package-info.class
+com/mytest/core/listeners/package-info.class
+com/mytest/core/filters/LoggingFilter.class
+com/mytest/core/schedulers/SimpleScheduledTask$Config.class
+com/mytest/core/schedulers/SimpleScheduledTask.class
+com/mytest/core/models/package-info.class
+com/mytest/core/schedulers/package-info.class
